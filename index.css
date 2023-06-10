@@ -1,0 +1,57 @@
+/* Disable-им дефолтные значния браузера */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* text */
+h1 {
+  /* oтвечает за позицониравние текста left center right*/
+  text-align: center;
+  /* отвечает за реазмер шрифта */
+  font-size: 50px;
+  /* отвечает за толщину шрифта */
+  /* Принимает значение 100-800, lighter,  bold, normal */
+  font-weight: 800;
+  /* Отевачет за цвет текста */
+  color: blue;
+  /* За шрифт текста */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* Отсупы(Spacing) */
+
+div {
+  /* это значение для ширины элемента */
+  /* width: 600px; */
+  width: fit-content; /* озночает занимай столько место сколько нужно твои детям */
+  /* это значение для высоту элемента */
+  /* height: 260px; */
+  /*  это значение для фонового цвета  */
+  background-color: #000000;
+
+  /* margin-left: 40px;
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-bottom: 30px; */
+  /*     
+  margin: 10px 20px 30px 40px; */
+
+  /* margin: 100px 200px 100px 200px; ->  */
+  /* margin: 100px 200px; */ /* вверх-них. лево-право */
+
+  /* все по алаоги как с margin-ом за исключением того что padding отвечает за внутренний отступ */
+  /* padding: 10px 20px 30px 40px; */
+
+  /* 1ым значением идет толщина границы, 2ым аргументом идет тип границы, 3им аргументами идет цвет границы */
+  /* border: 10px solid #000000; */
+
+  /* Отвечает за округление элемента */
+  border-radius: 20px;
+}
+
+/* 
+a {
+  margin-left: 500px;
+} */

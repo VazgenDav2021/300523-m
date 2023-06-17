@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* здесь мы перенсли таблицы к центры задали линий по краям */
+table {
+  margin: 50px auto;
+  border: 2px solid black;
+}
+
+/* здесь тоже поставли каждой ячейки грани */
+td {
+  border: 1px solid black;
+}
+
+img {
+  width: 39px;
+  height: 20px;
+}
+
+/* Мы заголовкам дали жирный текст, и отцентравали */
+table thead td {
+  text-align: center;
+  font-weight: bold;
+}

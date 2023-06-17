@@ -1,0 +1,30 @@
+/* Сбросили дефолтные стили браузера */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* 0px - верх, низ */
+  /* 40px - лево, право */
+  padding: 100px 40px;
+}
+
+.title {
+  font-size: 35px;
+  margin-bottom: 40px;
+}
+
+.detailed_text {
+  /* Задали задний цвет элементу */
+  background-color: #34495e;
+  /* Сделали округлнеи краев */
+  border-radius: 20px;
+  /* Внутренний отступ */
+  padding: 21px;
+  /* Внешний верхной отступ */
+  margin-top: 30px;
+  /* Задали цвет текста */
+  color: #fff;
+}

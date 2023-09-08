@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  background: #181818;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav{
+    padding-top: 37px;
+    width: 1095px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu{
+    display: flex;
+    gap: 31px;
+    list-style-type: none;
+    color: #fff;
+    align-items: center;
+}
+
+.menu_item{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.login_btn{
+    padding: 4px 36px;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 4px 31px 0px #00000026;
+    background: transparent;
+    color: #FFFFFF;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 25px;
+    cursor: pointer;
+}
+
+.logo img {
+    cursor: pointer;
+}
+
+.hero {
+    margin-top: 85px;
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.title{
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 88px;
+    text-align: center;
+    color: #fff;
+    width: 658px;
+}
+
+.text {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    width: 550px;
+}
+
+.button_container{
+    width: 387px;
+    margin: 35px auto 0px auto;
+    display: flex;
+    gap: 35px;
+}
+
+.button_container button {
+    cursor: pointer;
+}
+
+.free_btn{
+    background: #4452FE;
+    box-shadow: 0px 4px 31px 0px #00000026;
+    border: none;
+    padding: 10px 30px 10px 30px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.statistics_img{
+    width: 100%;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+}

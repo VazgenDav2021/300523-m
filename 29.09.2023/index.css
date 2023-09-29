@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 .container{
     width: 100%;
     height: 600px;
@@ -47,4 +46,57 @@
 
 .elem:last-child{
     background-color: pink;
+} 
+
+
+.container2{
+    width: 100%;
+    height: 600px;
+    background-color: red;
+    display: grid;
+    /* grid-template-columns: repeat(3, auto); */
+    /* Минимальную высоту 100px, максимальную 250px */
+    grid-auto-rows: minmax(100px, auto);
+    /* Все неявные колнки будуть шириной 200px */
+    grid-auto-columns: 200px;
+    justify-content: center;
+    align-items: end;
 }
+
+.elem2:first-child{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+}
+
+
+.elem2:nth-child(2){
+    height: 100px;
+    width: 100px;
+    background-color: green;
+}
+
+.elem2:nth-child(3){
+    height: 100px;
+    width: 100px;
+    background-color: black;
+}
+
+.elem2:nth-child(4){
+    height: 100px;
+    width: 100px;
+    background-color: orange;
+}
+
+.elem2:nth-child(5){
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+}
+
+
+.elem2:last-child{
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+} 

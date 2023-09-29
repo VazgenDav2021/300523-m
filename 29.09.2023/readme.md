@@ -14,3 +14,8 @@
  5. GRID VS FLEX
     5.1 GRID: лучше использовать, когда надо создать сложные многоколоночные сетки
     5.2 FLEX: лучше использовать, кода надо выстроить элемемтны в сторку или колонку
+
+
+https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
+https://www.youtube.com/watch?v=GV92IdMGFfA - понять теорию
+https://www.youtube.com/watch?v=yWVJgnTpdUA - после теория моюно сдлеать

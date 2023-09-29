@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 600px;
+    background-color: red;
+    /* даем для того чотбы могли воспользоватся свойствами grida */
+    display: grid;
+    /* Создали 3 колонки с разными размерами */
+    grid-template-columns: 150px 200px 400px;
+    /* grid-template-rows: 99px 150px 150px; */
+    /* Создали 3 строки с разными размерами, фунцкия repeat в качестве первого значение принимает количество, а вторым параметром размер */
+    grid-template-rows: 99px repeat(2, 150px);
+    /* Дает одинкаовый промежуток между горизонталью и вертикалью */
+    grid-gap: 20px;
+    /* Промежуток между строками */
+    grid-row-gap:50px;
+    /* Промежуток между колонками */
+    grid-column-gap: 100px;
+}
+
+.elem:first-child{
+    background-color: blue;
+}
+
+
+.elem:nth-child(2){
+    background-color: green;
+}
+
+.elem:nth-child(3){
+    background-color: black;
+}
+
+.elem:nth-child(4){
+    background-color: orange;
+}
+
+.elem:nth-child(5){
+    background-color: yellow;
+}
+
+
+.elem:last-child{
+    background-color: pink;
+}

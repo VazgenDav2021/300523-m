@@ -80,8 +80,143 @@
 
 // 2. Написать фунцкию которая получет в качестве праметра счет и делает проверку:
 // 2.1 Если счет меньше 300 то чаевые составляют 20 процентов
-// 2.1 Если счет от 300 до 4500 чаевые составляют 15 процентов
-// 2.1 Если счет от 500 чаевые составляют 10 процентов
+// 2.1 Если счет от 300 до 450 чаевые составляют 15 процентов
+// 2.1 Если счет от 450 чаевые составляют 10 процентов
 // 3. Создать фунцкию которая в качестве параметра принимает счет передает значение счета в функцию котарая была вызваная в оснвонй функции
 // 4. В конце прибавить чаетвеы и общий счет
 // 5. Вывести счет след текстом "Total Result is: 450$"
+
+
+// Shafayat
+// function calculate(bill) {
+//     if (bill < 300) {
+//         return bill * 0.2
+//     } else if (bill >= 300 && bill <= 450) {
+//         return bill * 0.15
+//     }
+
+//     return bill * 0.1
+// }
+// function totalResult(bill) {
+//     const res = bill + calculate(bill);
+//     console.log(`Result is: ${res}$`);
+// }
+// totalResult(250);
+
+
+// Elena
+// const bill = (billInChek) => {
+//     let tea;
+//     if (billInChek < 300) {
+//         tea = billInChek * 0.2
+//     }
+//     else if (billInChek >= 300 && billInChek < 500) {
+//         tea = billInChek * 0.15
+//     }
+//     else if (billInChek >= 500) {
+//         tea = billInChek * 0.1
+//     }
+//     const rez = billInChek + tea;
+//     return rez
+
+// }
+
+// rezult = bill(500);
+// console.log(rezult);
+
+
+// Liliia
+// function calculateTips(bill) {
+//     if (bill < 300) {
+//         return bill * 0.2;
+//     } else if (bill >= 300 && bill < 450) {
+//         return bill * 0.15;
+//     }
+//     return bill * 0.1;
+// }
+// const bill = 500;
+// const resultTips = calculateTips(bill);
+
+// function totalResult(bill, resultTips) {
+//     const total = bill + resultTips;
+//     console.log(`Total Result is: ${total}$`);
+// }
+// totalResult(bill, resultTips);
+
+
+
+// Nadejda
+// function countTips(sum) {
+//     if (sum < 300) {
+//         return sum * 0.2;
+//     } else if (sum >= 300 && sum <= 450) {
+//         return sum * 0.15;
+//     }
+//     return sum * 0.1;
+// };
+
+// function countAllSum(sum) {
+//     const tips = countTips(sum);
+//     const total = sum + tips;
+//     return total;
+// };
+
+// countAllSum(120);
+// countAllSum(470);
+
+
+// Janis
+// function billCalc(bill) {
+//     if (bill < 300) {
+//         return bill * 0.20;
+//     } else if (bill >= 300 && bill < 450) {
+//         return bill * 0.15;
+//     }
+//     return bill * 0.10;
+// };
+
+// let personBill = 300;
+// console.log('Ваш счет: ' + `${billCalc(100) + personBill}$`);
+
+// Alona
+// function returnCheck(bill) {
+//     if (bill < 300) {
+//         return bill * 0.2
+//     }
+//     else if (bill >= 300 && bill < 450) {
+//         return bill * 0.15
+//     }
+//     return bill * 0.1;
+// };
+
+// function calcTotalBill(bill) {
+//     const tip = returnCheck(bill);
+//     const totalBill = bill + tip;
+//     return totalBill;
+// }
+
+
+// const billAmount = 450;
+// const tip = calcTotalBill(billAmount);
+// console.log(`Total Result is: $${tip}`);
+
+
+// Ulyana
+// function calculateTotalWithTip(bill) {
+//     let tipPercentage;
+
+//     if (bill < 300) {
+//         tipPercentage = 0.2;
+//     } else if (bill >= 300 && bill < 450) {
+//         tipPercentage = 0.15;
+//     } else {
+//         tipPercentage = 0.1;
+//     }
+
+//     const tip = bill * tipPercentage;
+//     const total = bill + tip;
+//     return `Total Result is: ${total}`;
+// }
+
+// const billAmount = 450;
+// const totalAmount = calculateTotalWithTip(billAmount);

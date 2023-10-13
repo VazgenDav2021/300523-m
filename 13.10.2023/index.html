@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .modal {
+            display: none;
+        }
+
+        form {
+            max-width: 400px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border: 2px solid;
+        }
+
+        form label {
+            display: grid;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .darkMode form{
+            background-color: blue;
+            border: 10px solid black;
+            color: #fff;
+        }
+
+        .darkMode form input{
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="modal">
+        <form action=""><label for="">Name:<input type="text"></label><label for="">Surname:<input
+                    type="text"></label><label for="">Email:<input type="text"></label>
+
+            <button>Click</button>
+            <button class="mode">Dark Mode</button>
+        </form>
+    </div>
+
+    <button class="open_modal">Open Modal</button>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

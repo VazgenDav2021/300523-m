@@ -38,11 +38,22 @@
 
 // Задание
 
-const rednerPosts = (posts) =>{
+const getCurrentPost = async(id) => {
+    await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`).then(async res => await res.json()).then(data => {
+       const p = document.createElement('p')
+        p.textContent = data.id
+        document.body.append(p)
+    })
+}
+
+const rednerPosts = (posts) => {
     const container = document.querySelector(".container")
-    posts.forEach(eachpost=>{
+    posts.forEach(eachpost => {
         const li = document.createElement('li')
         li.textContent = eachpost.title
+        li.addEventListener("click", () => {
+            getCurrentPost(eachpost.id)
+        })
         container.append(li)
     })
 }
@@ -53,12 +64,12 @@ const renderElement = () => {
     document.body.append(div);
 }
 const getData = async () => {
-    await fetch("https://jsonplaceholder.typicode.com/posts").then(async res=> await res.json()).then(data=>{
+    await fetch("https://jsonplaceholder.typicode.com/posts").then(async res => await res.json()).then(data => {
         rednerPosts(data)
     })
 }
 // функция для вызвоа 2х функции
-const init = () =>{
+const init = () => {
     renderElement()
     getData()
 }

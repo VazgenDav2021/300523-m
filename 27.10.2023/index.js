@@ -38,8 +38,13 @@
 
 // Задание
 
-const exampleFunction = (posts) =>{
-    console.log({ posts });
+const rednerPosts = (posts) =>{
+    const container = document.querySelector(".container")
+    posts.forEach(eachpost=>{
+        const li = document.createElement('li')
+        li.textContent = eachpost.title
+        container.append(li)
+    })
 }
 
 const renderElement = () => {
@@ -49,16 +54,15 @@ const renderElement = () => {
 }
 const getData = async () => {
     await fetch("https://jsonplaceholder.typicode.com/posts").then(async res=> await res.json()).then(data=>{
-        exampleFunction(data)
+        rednerPosts(data)
     })
 }
 // функция для вызвоа 2х функции
 const init = () =>{
-    getData()
     renderElement()
+    getData()
 }
 // функция init вызвится тогда когда весь html прогрузится
 document.addEventListener("DOMContentLoaded", init)
 
-// 1 После получения постов создать функцию которая итеративно проходится по всем постам и их по очердеи ресует в html
 // 2* При килкие на конкретный пост сделать запрос на сервер https://jsonplaceholder.typicode.com/posts/{id того поста на который кликнули} и получить детальную инфромацию о посте

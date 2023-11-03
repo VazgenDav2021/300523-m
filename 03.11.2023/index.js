@@ -11,33 +11,47 @@
 
 
 
-Promise.all
-const promises = [
-    fetch('https://jsonplaceholder.typicode.com/posts/1'),
-    fetch('https://jsonplaceholder.typicode.com/posts/2'),
-    fetch('https://jsonplaceholder.typicode.com/posts/3'),
-]
+// const promises = [
+//     fetch('https://jsonplaceholder.typicode.com/posts/1'),
+//     fetch('https://jsonplaceholder.typicode.com/posts/2'),
+//     fetch('https://jsonplaceholder.typicode.com/posts/3'),
+// ]
+
+// const getAllData = Promise.all(promises).then(response => {
+//     const transformedData = response.map(eachResponse => eachResponse.json())
+//     return transformedData
+// })
 
 
-Promise.all(promises).then(async res => {
-    console.log("All rpmoises resolved:", res);
-    return res.map(async eachPromise => await eachPromise.json())
-}).then(allTransformedData => {
-    console.log(allTransformedData);
-}).catch(error => {
-    console.log("Error", error);
-})
 
-const promises2 = [
-    fetch('https://jsonplaceholder.typicode.com/posts/1'),
-    fetch('https://jsonplaceholder.typicode.com/notexist'),
-    fetch('https://jsonplaceholder.typicode.com/posts/3'),
-]
+// const promises2 = [
+//     fetch('https://jsonplaceholder.typicode.com/posts/1'),
+//     fetch('https://jsonplaceholder.typicode.com/notexist'),
+//     fetch('https://jsonplaceholder.typicode.com/posts/3'),
+// ]
 
-Promise.allSettled(promises2).then(result=>{
-    console.log("All promises settled", result);
-})
+// const fetchData = async () => {
+//     const data = [];
 
+//     for (const promise of promises2) {
+//         try {
+//             const response = await promise
+//             if(response.ok){
+//                 const jsonData = await response.json()
+//                 data.push(jsonData)
+//             } else {
+//                 data.push(null)
+//             }
+//         } catch (error) {
+//             console.log('====================================');
+//             console.log({error});
+//             console.log('====================================');
+//             data.push(null)
+//         }
+//     }
+
+//     return data
+// }
 
 
 const promises3 = [
@@ -47,11 +61,18 @@ const promises3 = [
 ]
 
 
-Promise.race(promises3).then(result=>{
-    console.log("First resovled promise", result);
+Promise.race(promises3).then((response=>{
+    if(response.ok){
+        return response.json()
+    } else {
+        throw new Error ("Request failed")
+    }
+})).then(data=>{
+    console.log({data});
 })
 
 
+// 1. сделать функцию для простого запорса https://restcountries.com/v3.1/name/${динамичное название госудасртво} для получения информации о государстве
+// 2. Создать функцию которая получает данные о госудасстве и их отрисовывает в html (флаг, название, валюта, население, столица)
+// 3. Вызвать функция для получения государства (пункт 1) в обработчике события DOMContentLoaded
 
-// 1  В результате 3х примеров в консолях отабражаются fulfield и тд. 
-// 2 Сдлеать так ччотбы в результате 3х методов у меня показывалсаь инфомрация в виде реального объекта массива

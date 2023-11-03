@@ -11,32 +11,32 @@
 
 
 
-// Promise.all
-// const promises = [
-//     fetch('https://jsonplaceholder.typicode.com/posts/1'),
-//     fetch('https://jsonplaceholder.typicode.com/posts/2'),
-//     fetch('https://jsonplaceholder.typicode.com/posts/3'),
-// ]
+Promise.all
+const promises = [
+    fetch('https://jsonplaceholder.typicode.com/posts/1'),
+    fetch('https://jsonplaceholder.typicode.com/posts/2'),
+    fetch('https://jsonplaceholder.typicode.com/posts/3'),
+]
 
 
-// Promise.all(promises).then(async res => {
-//     console.log("All rpmoises resolved:", res);
-//     return res.map(async eachPromise => await eachPromise.json())
-// }).then(allTransformedData => {
-//     console.log(allTransformedData);
-// }).catch(error => {
-//     console.log("Error", error);
-// })
+Promise.all(promises).then(async res => {
+    console.log("All rpmoises resolved:", res);
+    return res.map(async eachPromise => await eachPromise.json())
+}).then(allTransformedData => {
+    console.log(allTransformedData);
+}).catch(error => {
+    console.log("Error", error);
+})
 
-// const promises2 = [
-//     fetch('https://jsonplaceholder.typicode.com/posts/1'),
-//     fetch('https://jsonplaceholder.typicode.com/notexist'),
-//     fetch('https://jsonplaceholder.typicode.com/posts/3'),
-// ]
+const promises2 = [
+    fetch('https://jsonplaceholder.typicode.com/posts/1'),
+    fetch('https://jsonplaceholder.typicode.com/notexist'),
+    fetch('https://jsonplaceholder.typicode.com/posts/3'),
+]
 
-// Promise.allSettled(promises2).then(result=>{
-//     console.log("All promises settled", result);
-// })
+Promise.allSettled(promises2).then(result=>{
+    console.log("All promises settled", result);
+})
 
 
 
@@ -50,3 +50,8 @@ const promises3 = [
 Promise.race(promises3).then(result=>{
     console.log("First resovled promise", result);
 })
+
+
+
+// 1  В результате 3х примеров в консолях отабражаются fulfield и тд. 
+// 2 Сдлеать так ччотбы в результате 3х методов у меня показывалсаь инфомрация в виде реального объекта массива

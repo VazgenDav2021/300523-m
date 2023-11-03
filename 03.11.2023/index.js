@@ -105,3 +105,7 @@ const getCountryInfo = async (countryName) => {
 document.addEventListener("DOMContentLoaded", () => {
     getCountryInfo("ukraine")
 })
+
+
+// 1. После того как получили о конкретном государстве внизу сделать запросы для получения информации о соседних госудасрствах и их отаброзить
+// https://restcountries.com/v3.1/alpha?codes={корткое название госудасртва}

@@ -1,5 +1,6 @@
+import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar/Navbar';
+import vazgenSnaerks from './assets/sneakers.jpeg'
 
 
 // function App является компонентом который возращает JSX(HTML)
@@ -15,13 +16,20 @@ import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <div className='container'></div>
-    </div>
+    <>
+      <img src={vazgenSnaerks} />
+      <img src="/sneakers.jpeg" />
+    </>
   );
 }
 
 
+// 1. Создать нормальный со стилями импортировать в компонент App
+// 2. Создать компонент Images и в него добавить 4 фотографии которые должны быть одинаковы по размеры
+// 3. Импортовать компонент Images
+// return (
+// <Navbar/>
+// <Images/>
+// )
 
 export default App;

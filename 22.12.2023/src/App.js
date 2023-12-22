@@ -1,27 +1,53 @@
-import './App.css';
-import Janis from './components/Yanis/Yanis';
-import Ulyana from './components/Ulyana/Ulyana';
 
-// 1 Создать состояние "ползователи"
-// 2 Сделать запрос на https://jsonplaceholder.typicode.com/users
-// 3 Обнавить состоянеи "ползователи" ответом который предет из сервера
-// 4 Отрисовать всех ползьвоателей которых получили
-// "name": "Leanne Graham",
-// "username": "Bret",
-// "email": "Sincere@april.biz",
+import { useEffect, useState } from "react";
 
-// Создаете новый проейт
-// Длеате запрос в компоненте App
-// с помощю map итеративно показываете компонент EachUser который должны создать
+const Time = () => {
+  const [curTime, setCurTime] = useState(new Date());
 
-function App() {
+  useEffect(() => {
+    const updateCurrentTime = () => {
+      setCurTime(new Date());
+    }
+    const interId = setInterval(updateCurrentTime, 1000)
+    return () => clearInterval(interId)
+  }, [])
 
-  return (
-    <div className="App">
-      {/* <Janis /> */}
-      <Ulyana />
-    </div>
-  );
+  const formTime = curTime.toLocaleTimeString();
+
+
+
+
+  return <div>
+    <h2>Current time:{formTime}</h2>
+  </div>
 }
 
-export default App;
+
+export default Time;
+
+// import { useEffect, useState } from "react"
+
+//  const Clock = () => {
+//   const [time, setTime] = useState(new Date())
+
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setTime(new Date())
+//     }, 1000)
+//     return () => clearInterval(interval)
+//   }, [])
+
+//   const hours = time.getHours()
+//   const min = time.getMinutes()
+//   const sec = time.getSeconds()
+
+//   const timeString = `${hours}:${min}:${sec}`
+
+//   return (
+//     <div>
+//       <h1>{timeString}</h1>
+//     </div>
+//   )
+// }
+
+// export default Clock

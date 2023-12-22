@@ -1,0 +1,40 @@
+.box {
+  height: 100px;
+  width: 100px;
+  border: 5px solid transparent;
+  margin: 30px;
+  display: inline-block;
+  padding: 20px;
+}
+
+
+.primary {
+  border-color: violet;
+}
+
+.error {
+  border-color: blueviolet;
+}
+
+.info {
+  border-color: turquoise;
+}
+
+button{
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+button.primary {
+  background-color: violet;
+}
+button.error {
+  background-color: blueviolet;
+}
+button.info {
+  background-color: turquoise;
+}

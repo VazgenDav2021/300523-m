@@ -1,0 +1,21 @@
+.yanix-box{
+    width: 100%;
+}
+
+.box{
+    width: 80%;
+    height: 500px;
+    border: 5px solid;
+}
+
+.primary {
+    border-color: blue;
+}
+
+.error {
+    border-color: red;
+}
+
+.info{
+    border-color: green;
+}
